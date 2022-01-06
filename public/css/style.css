@@ -1,0 +1,110 @@
+*{
+    box-sizing: border-box;
+}
+
+
+/* body background color and card background color */
+:root {
+    --main-bg-color:#191A19;
+    --card-bg-color:#1E5128;
+}
+
+h1{
+    font-weight:600;
+    color:gray;
+}
+
+p{
+   font-weight: 100;
+}
+
+hr{
+    color:black;
+    max-width: 100%;
+}
+
+body{
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--main-bg-color);
+    color:white;
+    padding:50px;
+}
+
+
+/* input styles */
+input {
+    outline: 0;
+    border-width: 0 0 2px;
+    border-color: #1A5F7A;
+    text-align: center;
+    background-color: var(--card-bg-color);
+    caret-color:lime;
+}
+input:focus {
+    border-color: lime;
+    color:lime;
+}
+
+input:checked+.item {
+    text-decoration: line-through;
+    text-decoration-color:brown;
+}
+
+
+/* top header div */
+.day{
+    margin:30px auto 0;
+    text-align: center;
+    max-width: 18rem;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: lime;
+    padding:10px;
+}
+
+
+/* card styles */
+.card{
+    max-width:18rem;
+    margin:40px auto 80px;
+    border-radius: 10px;
+    background-color: var(--card-bg-color);
+}
+
+.item-container{
+    display:flex;
+    margin-bottom: 20px;
+    gap:1rem;
+    align-items: baseline;
+}
+
+.item{
+  position:relative;
+  left:1.3rem;
+  bottom:1.58rem;
+  color:gray;
+
+}
+
+.item-form{
+    text-align: center;
+}
+
+.submit-button{
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    margin-top:20px;
+    background-color: lime;
+    color:white;
+    font-size: 1.3rem;
+    transition:ease-in-out 200ms;
+}
+
+.submit-button:hover{
+    background-color:#1A5F7A;
+}
+
+footer{
+    text-align: center;
+}

@@ -1,0 +1,54 @@
+<%- include("header.ejs");%>
+
+<body>
+
+    <main>
+
+      <div class="day">
+         <h4><%= date %></h4>
+      </div>
+
+       <div class="day">
+          <h1><%= listType %></h1>
+       </div>
+
+      <div class="card">
+
+          <div class="card-body">
+
+            <% data.forEach((item)=>{ %>
+              <div class="item-container">
+                <form action="/delete" method="post">
+                  <input type="checkbox" onChange="this.form.submit()" name="checkbox">
+                  <p class="item"><%= item.name %></p>
+                  <input name="itemId" value="<%= item._id %>" type="hidden"></input>
+                  <input name="listType" value="<%=listType %>" type="hidden"></input>
+                </form>
+
+
+
+
+              </div>
+              <hr>
+            <% }); %>
+
+
+            <form class="item-form" action="/" method="post">
+                <input type="text" placeholder="item" name="newItem" autofocus autocomplete="off">
+                <button class="submit-button btn" type="submit" name="listType" value="<%=listType%>">+</button>
+            </form>
+
+          </div>
+
+      </div>
+
+
+    </main>
+
+
+    <footer>
+        <p>Copyright <%= year %> MuhammadKeyton</p>
+    </footer>
+
+</body>
+</html>
